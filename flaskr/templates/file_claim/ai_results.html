@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <h2> Visual Classification </h2>
+    <table id="visual" class = "table">
+    <thead>
+      <tr>
+        <th> Class </th>
+        <th> Accuracy </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for result in results['visual'] %}
+      <tr>
+        <td> {{ result.class }} </td>
+        <td> {{ result.accuracy }} </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+
+    <h2> Tone Sentiment </h2>
+    <table id="tone" class = "table">
+    <thead>
+      <tr>
+        <th> Sentiment </th>
+        <th> Accuracy </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for result in results['tone_sentiment'] %}
+      <tr>
+        <td> {{ result.tone }} </td>
+        <td> {{ result.accuracy }} </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+
+    <h2> Translation </h2>
+
+    {{ results['translation'] }}
+    <!-- Visual Recognition: {{ results['visual'] }} -->
+
+    <hr>
+
+    <div id="rawJSON">
+      {{ rawJSON }}
+    </div>
+
+  </body>
+</html>

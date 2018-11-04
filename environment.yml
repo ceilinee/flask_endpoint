@@ -1,0 +1,5 @@
+name: claims_poc
+channels:
+  - defaults
+prefix: C:\Users\prjena\AppData\Local\Continuum\anaconda3\envs\claims_poc
+
