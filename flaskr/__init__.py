@@ -7,7 +7,7 @@ from flask_uploads import UploadSet, configure_uploads, IMAGES
 from . import watson_helper
 
 def create_app(test_config = None):
-    app = Flask(__name__,instance_relative_config=True)
+    application = app = Flask(__name__,instance_relative_config=True)
     CORS(app)
 
     photos = UploadSet('photos',IMAGES)
