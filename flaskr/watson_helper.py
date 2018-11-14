@@ -17,9 +17,10 @@ def visual(picture_url):
     text = ""
 
     results_arr = []
-
-    for things in vehicle_type.result['images'][0]['classifiers'][0]['classes']:
-        dict = {'class':things['class'],'accuracy':round(things['score']*100,2)}
+    print(vehicle_type.get_result())
+    vehicle = vehicle_type.get_result()
+    for things in vehicle['images'][0]['classifiers'][0]['classes']:
+        dict = {'class':things['class'],'accuracy':round(things['score']*100,2), 'type_hierarchy':things.get('type_hierarchy')}
         results_arr.append(dict)
 
     # print(results_arr)
