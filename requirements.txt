@@ -4,5 +4,5 @@ Flask==1.0.2
 Flask-Cors==3.0.6
 Flask-Uploads==0.2.1
 gunicorn==19.9.0
-urllib3==1.22
+urllib3==1.26.5
 watson-developer-cloud==2.3.0
